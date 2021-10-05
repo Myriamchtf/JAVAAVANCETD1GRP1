@@ -1,0 +1,93 @@
+Exercice 1
+
+1. Création du projet et du Package
+
+2. Quand on fait sysout Ctrl + Space in the main method, on obtient System.out.println(); qui permet d'afficher ce qui est écrit entre les parenthèses. 
+
+3. Lorsqu'on tappe toStr dans une classe, puis que l'on fait Ctrl + Space, on peut choisir différents templades dont ToString(). 
+
+4. Lorsqu'on tappe main dans une classe, puis que l'on fait Ctrl + Space, on peut choisir différents templades dont celui pour la méthode principale : public static void main(String[] args) {}
+
+5. a) Quand on crée un new int field foo et que l'on fait,  puis que l'on fait Ctrl + Space, on peut choisir de créer un nouveau objet avec type name = new type();
+
+   b) Quand on marque set et qu'ont fait Ctrl + Space, on obtient toutes les fonctions qui commencent par Set 
+   
+6. a) Quand on sélectionne la classe name, si on tappe Alt+Shift+R, on obient une fenêtre où on peux rechercher nos ressources
+
+   b) Avec le field foo, si on tappe Alt+Shift+R, on a la possibilité de renommer la variable. 
+
+Exercice 2 
+
+1. Ca marche car la première ligne permet de déclarer un objet et de l'initisaliser à (0,0). Pour la 2ème ligne, on fait appel à l'objet pour afficher les coordonnées de x et de y.Néanmoins, il manque le ";" à la fin
+	De plus, main est une méthode de Point, donc a accès au champs qui sont en privées.
+
+2. Ce qui ce passe dans la classe TestPoint est que x et y sont private et que donc la classe n'y a plus accès. Pour y remédier, on peux créer des accesseurs pour x et y.   
+	
+3. private pour que les coordonnées soit visibles dans la classe Point et dans les classes statiques ou non. 
+
+4. Accesors permettent d'accèder à des champs qui ne sont pas directement accessible. Ici, on peut seulement mettre les getters.
+
+5. Ce qui ce passe est que le main ne compile plus. Il faut initilisé le point à (0,0)
+
+6. Quand on met x et y, ca marche car on a définis les fields auparavant. Ca affecte x=x. Il faut utiliser this.x = x;
+
+7. On crée une méthode static
+
+8. Le compilateur sait sur quel constructeur se baser grâce à la signature (au nombre et au type d'arguments que les constructeurs possèdent.)
+
+Exercice 3
+
+1. Le code retourne True False. Le premier True car ca fait référence à la ref des objets. Et le deuxième même si p1 et p3 ont la même syntaxe, leur référence n'est pas la même.  
+
+2. Code pour afficher True True
+
+3. Le problème est que dans la liste on a seulement ajouté le point p1, donc le point p2 et p3 n'existe pas. La position dans la liste est fausse : -1.
+	La méthode IndexOf() permet de retourner la position de la première occurence dans une liste. Ainsi, IndexOf() dit True p1 et P2 et false p1 et P3
+	Pour régler le problème, on a juste à rajouter p2 et p3 dans la liste pour avoir leur position ou utiliser la méthode IsSameAs
+
+Question en plus : 
+
+1. La méthode IndexOf() pour les collections recherche l'expression parmi les èlèments de la collection et retourne le numéro d'élément trouvé à la première occurence
+2.Par défaut, la méthode equals retourne TRUE
+
+Exercice 4
+
+1. Sur le code 
+
+2. Dans mon cas, pour que le nombre de point ajoutés soit inférieurs ou égales au nombre de point max j'ai utilisé une boucle if :
+	 ( elle rajoute le point si nbmax >= nombre de point dans la liste). Si le nombre max est dépassé on obtient ArrayIndexOutOfBoundsException, on peut supprimer le = de la boucle for
+
+3.Au début la sortie sera fausse. 
+Mais si on ajoute add(null), on ajoutera null, le code l'acceptera mais il y aura des problèmes dans le code. 
+
+6. Linkedlist permet des insertions ou des suppressions en temps constant, c'est dynamique.
+Pour PointCapacity(), on peut le retirer.
+Pour nbpoint(), on peut utiliser int size() qui retourne la taillea actuelle ou le nb d'objet dans la liste.
+Pour contains, on peut utiliser directement boolean contains(Object o). Elle vérifie si l'objet est présent dans la liste. 
+
+
+Exercice 5
+
+1. les deux choi sont avoir des objets mutables c'est à dire que lse champs pourront être modifié ou qu'il ne le soit pas.
+
+2. Code 
+
+3. Code 
+
+4. Code
+
+5. Le problème est que tous les autres cercles sont translatés, on peut modifier un cercle à partir d'un autre. Donc pour régler cela, on le rends non mutable.
+
+6. Le problème avec getcenter est qu'on peut modifier un cercle à partir d'un getter. On doit faire une copie défensive.
+
+7. Code 
+
+8. Code 
+
+
+Exercice 6
+
+1. Oui, on utilise l'héritage car un anneau peut être considérés comme deux cercles de rayon différents. 
+
+4. Cela affichera le tostring de la classe mère : cerle et non de la classe Ring
+
